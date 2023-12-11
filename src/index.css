@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.form-wrapper{
+    @apply flex-col px-2 space-y-3 py-2;
+}
+.page-wrapper{
+    @apply flex-col px-2 space-y-3 py-2;
+}
+.icon-wrapper{
+    @apply flex items-center rounded-full justify-center mx-auto w-10 h-10 bg-blue-500 text-gray-50 dark:bg-blue-600 dark:text-gray-100;
+}
+.title{
+    @apply text-3xl font-bold
+}
+
+.subtitle{
+    @apply text-lg mb-2
+}
