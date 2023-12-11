@@ -16,7 +16,7 @@ export function Providers({ children }) {
                 <NextUIProvider>
                     <I18nextProvider i18n={i18n}>
                         <Toaster/>
-                        <main className={`${darkMode.value ? 'dark' : ''} text-foreground bg-background min-h-screen`}>
+                        <main className={`${darkMode.value ? '' : ''} min-h-screen`}>
                             {children}
                         </main>
                     </I18nextProvider>

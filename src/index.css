@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    @apply dir-rtl font-[sahel] text-right bg-gray-100;
+}
+
+.dir-rtl {
+    direction: rtl;
+}
 
 .form-wrapper{
     @apply flex-col px-2 space-y-3 py-2;
