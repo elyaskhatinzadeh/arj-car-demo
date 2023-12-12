@@ -19,9 +19,16 @@ import Input from "../../components/ui/Input";
 import Select from "../../components/ui/Select";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/outline";
 import {cars, columns, fields_one} from "../../data"
+import {useAuth} from "../../providers/AuthProvider";
+import Login from "../Login";
 
 
 function CarPage() {
+
+    const {authenticated} = useAuth()
+
+
+
 
     const [rows, setRows] = useState(cars)
     const [openForm, setOpenForm] = useState(false)
@@ -131,6 +138,9 @@ function CarPage() {
     }
 
 
+    if (!authenticated){
+        return <Login />
+    }
 
 
     return (

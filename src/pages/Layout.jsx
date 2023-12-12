@@ -5,9 +5,9 @@ import AuthenticateLayout from "./AuthenticateLayout";
 const Layout = () => {
     return (
         <Providers>
-            <AuthenticateLayout>
+            <>
                 <Outlet />
-            </AuthenticateLayout>
+            </>
         </Providers>
     )
 };
