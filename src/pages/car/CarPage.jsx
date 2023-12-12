@@ -170,7 +170,7 @@ function CarPage() {
 
 
                     {openForm && (<form action="" className="block w-full">
-                                <div className="grid grid-cols-12 gap-3">
+                                <div className="grid sm:grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3">
                                     {fields_one.map((i, index) => (
                                         <>
                                             {!i.type && <Input
