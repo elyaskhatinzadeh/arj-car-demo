@@ -2,6 +2,7 @@
 const cars = [
     {
         "id": "1",
+        "user": "علی رضایی",
         "type": "موتور سیکلت",
         "system": "هوندا",
         "tip": "125",
@@ -11,10 +12,10 @@ const cars = [
         "capacity": "4",
         "cylinder": "4",
         "axis": "0",
-        "motor_number": "0",
+        "motor_number": "Ac5126",
         "chassis_number": "1",
         "number": "565/42971",
-        "serial_number": "",
+        "serial_number": "50136900",
         "status": "active",
         "owner_type": "مامور به خدمت",
         "owner": "دادگستری شهرستان باغملک",
@@ -22,6 +23,7 @@ const cars = [
     },
     {
         "id": "2",
+        "user": "علی رضایی",
         "type": "موتور سیکلت",
         "system": "هوندا",
         "tip": "125",
@@ -31,17 +33,18 @@ const cars = [
         "capacity": "4",
         "cylinder": "4",
         "axis": "0",
-        "motor_number": "0",
+        "motor_number": "65000",
         "chassis_number": "1",
         "number": "565/42971",
-        "serial_number": "",
+        "serial_number": "962036900",
         "status": "active",
         "owner_type": "مامور به خدمت",
-        "owner": "دادگستری شهرستان اندیمشک",
+        "owner": "شهرستان اهواز",
         "description": ""
     },
     {
         "id": "3",
+        "user": "علی رضایی",
         "type": "خودرو",
         "system": "پژو",
         "tip": "125",
@@ -54,30 +57,31 @@ const cars = [
         "motor_number": "0",
         "chassis_number": "1",
         "number": "565/42971",
-        "serial_number": "",
+        "serial_number": "1259800",
         "status": "active",
         "owner_type": "مامور به خدمت",
-        "owner": "دادگستری شهرستان باغملک",
+        "owner": "شهرستان آبادان",
         "description": ""
     },
     {
         "id": "4",
+        "user": "علی حسینی",
         "type": "خودرو",
         "system": "سانتافه",
         "tip": "125",
         "color": "قرمز",
         "model": "1394",
-        "fuel": "petrol",
+        "fuel": "gas",
         "capacity": "4",
         "cylinder": "4",
-        "axis": "0",
-        "motor_number": "0",
+        "axis": "4",
+        "motor_number": "98002510",
         "chassis_number": "1",
         "number": "565/42971",
-        "serial_number": "",
+        "serial_number": "9002525",
         "status": "active",
         "owner_type": "مامور به خدمت",
-        "owner": "دادگستری شهرستان باغملک",
+        "owner": "شهرستان باغملک",
         "description": ""
     },
 ];
@@ -88,11 +92,11 @@ const columns = [
         label: "کد",
     },
     {
-        key: "role",
+        key: "user",
         label: "ثبت نام کننده",
     },
     {
-        key: "name",
+        key: "type",
         label: "نام",
     },
     {
@@ -104,19 +108,19 @@ const columns = [
         label: "شماره",
     },
     {
-        key: "serial",
+        key: "serial_number",
         label: "سریال",
     },
     {
-        key: "motor",
+        key: "motor_number",
         label: "شماره موتور",
     },
     {
-        key: "shasi",
+        key: "chassis_number",
         label: "شماره شاسی",
     },
     {
-        key: "type",
+        key: "owner_type",
         label: "نوع مالکیت",
     },
 ];
@@ -133,7 +137,7 @@ const statusOptions = [
 ]
 
 const fields_one = [
-    {key: "id", label: "کد", size: 1},
+    {key: "id", label: "کد", size: 1, readOnly: true},
     {key: "type", label: "نوع", size: 3},
     {key: "system", label: "سیستم", size: 2},
     {key: "tip", label: "تیپ", size: 2},

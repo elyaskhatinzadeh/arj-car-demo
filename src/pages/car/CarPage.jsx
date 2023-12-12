@@ -52,6 +52,13 @@ function CarPage() {
         setOpenForm(true)
     }
 
+
+    const onOpenForm = () => {
+        setSelectedRow(null)
+        setOpenForm(prevState => !prevState)
+        setFormData({id: rows.length + 1, user: 'ادمین'})
+    }
+
     const onCancel = () => {
         setFormData({})
         setSelectedRow(null)
@@ -136,7 +143,7 @@ function CarPage() {
                     <h1 className="text-2xl p-2">وسایط نقلیه</h1>
                     <div className="flex gap-3 items-center">
                         <Button
-                            onPress={() => setOpenForm(prevState => !prevState)}
+                            onPress={onOpenForm}
                             color="primary">ایجاد</Button>
                         <Input
                             className="max-w-xs"
@@ -157,6 +164,7 @@ function CarPage() {
                                     {fields_one.map((i, index) => (
                                         <>
                                             {!i.type && <Input
+                                                readOnly={i.readOnly ?? false}
                                                 className={cn(`col-span-${i.size ?? 2}`)}
                                                 label={i.label}
                                                 name={i.key}
@@ -169,7 +177,7 @@ function CarPage() {
                                                 className={cn(`text-right col-span-${i.size ?? 2}`)}
                                                 label={i.label}
                                                 name={i.key}
-                                                value={formData[i.key]}
+                                                selectedKeys={[formData[i.key]]}
                                                 onChange={onChange}
                                             />}
                                         </>
@@ -208,7 +216,7 @@ function CarPage() {
                         <TableBody items={filteredItems}>
                             {(item) => (
                                 <TableRow key={item.id}>
-                                    {(columnKey) => <TableCell className="text-right" >{getKeyValue(item, columnKey)}</TableCell>}
+                                    {(columnKey) => <TableCell className="text-right hover:cursor-pointer" >{getKeyValue(item, columnKey)}</TableCell>}
                                 </TableRow>
                             )}
                         </TableBody>
