@@ -2,8 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer base {
+
+    @font-face {
+        font-family: Sahel;
+        font-style: normal;
+        font-weight: bold;
+        src: url(./assets/fonts/sahel/Sahel-Bold-FD.eot);
+        src: url(./assets/fonts/sahel/Sahel-Bold-FD.eot?#iefix) format('embedded-opentype'),  /* IE6-8 */
+        url(./assets/fonts/sahel/Sahel-Bold-FD.woff) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url(./assets/fonts/sahel/Sahel-Bold-FD.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: Sahel;
+        font-style: normal;
+        font-weight: 300;
+        src: url(./assets/fonts/sahel/Sahel-Light-FD.eot);
+        src: url(./assets/fonts/sahel/Sahel-Light-FD.eot?#iefix) format('embedded-opentype'),  /* IE6-8 */
+        url(./assets/fonts/sahel/Sahel-Light-FD.woff) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url(./assets/fonts/sahel/Sahel-Light-FD.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: Sahel;
+        font-style: normal;
+        font-weight: normal;
+        src: url(./assets/fonts/sahel/Sahel-FD.eot);
+        src: url(./assets/fonts/sahel/Sahel-FD.eot?#iefix) format('embedded-opentype'),  /* IE6-8 */
+        url(./assets/fonts/sahel/Sahel-FD.woff) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url(./assets/fonts/sahel/Sahel-FD.ttf) format('truetype');
+    }
+
+}
+
+
+
+
+
+
 body{
-    @apply dir-rtl font-[sahel] text-right bg-gray-100;
+    @apply dir-rtl font-[Sahel] text-right bg-gray-100;
 }
 
 .dir-rtl {
